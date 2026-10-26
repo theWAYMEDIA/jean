@@ -1,0 +1,15 @@
+<ul class="posts">
+  {{- range $p := . }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      {{- /* cover: front matter, else the first photo in the post folder */}}
+      {{- $img := .Resources.GetMatch "{*.jpg,*.jpeg,*.png,*.webp,*.JPG,*.JPEG,*.PNG}" }}
+      {{- with .Params.cover }}{{ $img = $p.Resources.Get . }}{{ end }}
+      {{- with $img }}{{ with .Fill "600x400 webp Center" }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">{{ end }}{{ end }}
+      <span class="t">{{ .Title }}</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+    </a>
+  </li>
+  {{- end }}
+</ul>

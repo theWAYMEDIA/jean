@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{- if eq .Section "posts" }}
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+  {{- end }}
+  <div class="prose">{{ .Content }}</div>
+
+  {{- with .Params.gallery }}
+  <div class="gallery">
+    {{- range $i, $g := . }}
+    {{- with $.Resources.Get $g.src }}
+    {{- $t := .Fill "480x480 webp Smart" }}{{ $f := .Fit "1600x1600 webp" }}
+    <figure>
+      <a href="{{ $f.RelPermalink }}" data-w="{{ $f.Width }}" data-h="{{ $f.Height }}">
+        <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ $g.caption }}" loading="{{ cond (lt $i 6) "eager" "lazy" }}" decoding="async">
+      </a>
+      {{- with $g.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
+    {{- end }}
+  </div>
+  <dialog class="lightbox" aria-label="Photo">
+    <button type="button" class="close" aria-label="Close">×</button>
+    <button type="button" class="prev" aria-label="Previous">‹</button>
+    <img alt="">
+    <button type="button" class="next" aria-label="Next">›</button>
+    <p></p>
+  </dialog>
+  <script>
+  (() => {
+    const links = [...document.querySelectorAll('.gallery a')];
+    const d = document.querySelector('.lightbox'), img = d.querySelector('img'), cap = d.querySelector('p');
+    let i = 0;
+    const show = n => {
+      i = (n + links.length) % links.length;
+      const a = links[i];
+      img.src = a.href; img.alt = a.querySelector('img').alt; cap.textContent = img.alt;
+    };
+    links.forEach((a, n) => a.addEventListener('click', e => { e.preventDefault(); show(n); d.showModal(); }));
+    d.querySelector('.prev').onclick = () => show(i - 1);
+    d.querySelector('.next').onclick = () => show(i + 1);
+    d.querySelector('.close').onclick = () => d.close();
+    d.addEventListener('click', e => { if (e.target === d) d.close(); });
+    d.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+  })();
+  </script>
+  {{- end }}
+</article>
+{{ end }}

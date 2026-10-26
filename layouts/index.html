@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="card">
+  {{- with .Resources.GetMatch "portrait.*" }}
+  {{- $s := .Resize "320x webp" }}{{ $l := .Resize "640x webp" }}
+  <img class="portrait" src="{{ $s.RelPermalink }}" srcset="{{ $s.RelPermalink }} 320w, {{ $l.RelPermalink }} 640w" sizes="(max-width: 600px) 60vw, 320px" width="{{ $s.Width }}" height="{{ $s.Height }}" alt="Portrait of {{ site.Title }}" fetchpriority="high">
+  {{- end }}
+  <div>
+    <h1>{{ site.Title }}</h1>
+    <p class="tagline">{{ site.Params.tagline }}</p>
+    {{ .Content }}
+    {{- with site.Params.contact }}
+    <dl class="contact">
+      {{- range . }}
+      <dt>{{ .label }}</dt><dd><a href="{{ .url }}">{{ .text }}</a></dd>
+      {{- end }}
+    </dl>
+    {{- end }}
+  </div>
+</section>
+
+<section class="recent">
+  <h2>From the journal</h2>
+  {{ partial "post-cards.html" (where site.RegularPages "Section" "posts") }}
+</section>
+{{ end }}

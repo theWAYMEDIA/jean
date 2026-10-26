@@ -1,0 +1,10 @@
+{{- /* ![caption](photo.jpg) in a post: resize photos from the post folder, link to the large version */}}
+{{- with .Page.Resources.Get .Destination }}
+{{- $m := .Fit "1200x1200 webp" }}{{ $l := .Fit "1600x1600 webp" }}
+<figure class="inline">
+  <a href="{{ $l.RelPermalink }}"><img src="{{ $m.RelPermalink }}" width="{{ $m.Width }}" height="{{ $m.Height }}" alt="{{ $.Text }}" loading="lazy" decoding="async"></a>
+  {{- with $.Text }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else }}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
+{{- end }}

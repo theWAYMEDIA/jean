@@ -1,0 +1,56 @@
+---
+title: "Memories"
+cover: 20170627_162716_HDR-scaled-e1585975056635.jpg
+gallery:
+  - src: 20170627_162716_HDR-scaled-e1585975056635.jpg
+  - src: 20170627_180836_HDR-2500px.jpg
+  - src: 20170630_134330-scaled.jpg
+  - src: 20171118_retreat_butterfly_path-02.jpg
+  - src: 20180702_113644_HDR-scaled.jpg
+  - src: 20180706_152202_HDR-scaled.jpg
+  - src: 20180706_152411_HDR-scaled.jpg
+  - src: 20190430_163732-scaled.jpg
+  - src: 20190501_164456_HDR_Film1-01-scaled-e1588174055649.jpeg
+  - src: 20190501_164806_HDR_Film1-01-scaled.jpeg
+  - src: 20190503_124432-scaled.jpg
+  - src: 20190503_131402-01-01-02-scaled.jpeg
+  - src: 853240760_371772.jpg
+  - src: 853436470_305576.jpg
+  - src: 853504038_269184.jpg
+  - src: 853505598_75766.jpg
+  - src: 853505719_75467.jpg
+  - src: IMG-20170304-WA0002.jpg
+  - src: IMG-20170304-WA0003.jpg
+  - src: IMG-20170419-WA0000.jpg
+  - src: IMG_20180728_152324-scaled.jpg
+  - src: IMG_20180818_101634-scaled.jpg
+  - src: Yajn-and-scruffy-st.origen-ashram-1996.jpg
+  - src: Yusa-3.jpg
+  - src: acharya_yajn_kathmandu_2017-burning_ghat_shivling_112-scaled.jpg
+  - src: author_jean_du_plessis_himalaya_workshop.jpg
+  - src: author_jean_duplessis_taking_notes_gypsies_himalaya-02.jpg
+  - src: jean-bfly-path-kolkata-library-02.jpg
+  - src: jean_author_varanasi_bfly-path-4.jpg
+  - src: jean_srinagar_mount_solomon_01-scaled.jpg
+  - src: mar-yusa-srinagar-2000.jpg
+  - src: received_10212052879294578.jpeg
+  - src: taprom_150121_1000.jpg
+  - src: taprom_temple_teacher_yajn_jean.jpg
+  - src: teacher_jean_work_vietnam_workshop-02-scaled.jpg
+  - src: way-32-scaled.jpg
+  - src: yajn-ancient-temple-vietnam-01.jpg
+  - src: yajn-jammu-himalya-house-family-1-scaled.jpg
+  - src: yajn-jean-2013-tree-india-1-scaled.jpg
+  - src: yajn-jean-cambodia-temple-2014-1-scaled.jpg
+  - src: yajn-jean-healer-teacher-pneumatherapy-training-new-delhi-2017-56-scaled.jpg
+  - src: yajn-latrine-siem-reap-install-1-scaled.jpg
+  - src: yajn-mexico-selfie-03.jpg
+  - src: yajn-water-install-siem-reap-2014-1-scaled.jpg
+  - src: yajn_jean_acharya_mountain_temple_tam_coc_vietnam_2018.jpg
+  - src: yajn_jean_bw-srinagar-11.jpg
+  - src: yajn_jean_kashmir-family-home-colour-18-scaled.jpg
+  - src: yajn_jean_naga_bridge_pouk_village_2017-scaled.jpg
+  - src: yajn_jean_river-himalaya-sharper-16-scaled.jpg
+---
+
+Photos from our years of teaching and travel.

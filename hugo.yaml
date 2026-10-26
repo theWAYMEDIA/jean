@@ -1,0 +1,47 @@
+baseURL: 'https://jeanduplessis.net/'
+languageCode: 'en'
+title: 'Jean Prieur du Plessis'
+
+params:
+  description: "Jean Prieur du Plessis — author and teacher in the Wayist tradition."
+  tagline: "Author / Teacher"
+  contact:
+    - label: 'Wayist.Life'
+      text: '@jeanduplessis'
+      url: 'https://wayist.life'
+    - label: 'X'
+      text: '@wayistcoach'
+      url: 'https://x.com/wayistcoach'
+    - label: 'Amazon'
+      text: 'Author page'
+      url: 'https://www.amazon.com/stores/Jean-Prieur-du-Plessis/author/B0DH4BLB7G'
+
+# Old WordPress post URLs (/<slug>/) keep working
+permalinks:
+  posts: '/:slug/'
+
+disableKinds: ['taxonomy', 'term']
+
+outputs:
+  home: ['HTML']
+  section: ['HTML', 'RSS']
+  page: ['HTML']
+
+imaging:
+  quality: 78
+  resampleFilter: 'Lanczos'
+
+menu:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 10
+    - name: 'About'
+      url: '/about/'
+      weight: 15
+    - name: 'Memories'
+      url: '/memories/'
+      weight: 20
+    - name: 'Posts'
+      url: '/posts/'
+      weight: 30
